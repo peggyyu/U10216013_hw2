@@ -16,7 +16,7 @@ import javax.swing.JButton;
 
 
 public class BMI extends JFrame {
-
+	/**create text fields for name, age, height, weight, BMI*/
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -48,7 +48,7 @@ public class BMI extends JFrame {
 			double weight = Double.parseDouble(textField_3.getText());
 			//Calculate BMI value
 			double bmi = weight / ((height * 0.01) * (height * 0.01));
-			//print BMI on the Your BMI text field
+			//Display BMI on the Your BMI text field
 			textField_4.setText(String.format("%.2f", bmi));
 		}
 	}
@@ -117,10 +117,12 @@ public class BMI extends JFrame {
 		layeredPane.add(textField_4);
 		textField_4.setColumns(10);
 		
+		//Create a calculate button
 		JButton btnCalculate = new JButton("Calculate");
 		btnCalculate.setBounds(145, 194, 87, 23);
 		layeredPane.add(btnCalculate);
 		
+		//Register listener
 		btnCalculate.addActionListener(new ButtonListener());
 	}
 }
