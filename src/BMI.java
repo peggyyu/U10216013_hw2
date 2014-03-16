@@ -120,5 +120,7 @@ public class BMI extends JFrame {
 		JButton btnCalculate = new JButton("Calculate");
 		btnCalculate.setBounds(145, 194, 87, 23);
 		layeredPane.add(btnCalculate);
+		
+		btnCalculate.addActionListener(new ButtonListener());
 	}
 }
