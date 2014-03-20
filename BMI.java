@@ -45,9 +45,9 @@ public class BMI extends JFrame {
 	    jbtCalculate.addActionListener(new ButtonListener());
 	  }
 
-	  /** Handle the Compute Payment button */
+	  /** Handle the Calculate button */
 	  private class ButtonListener implements ActionListener{
-			@Override
+			@Override/**Implement actionPerformed*/
 			public void actionPerformed(ActionEvent e){
 				//Get values from text fields
 				double height = Double.parseDouble(jtfHeight.getText());
@@ -56,7 +56,7 @@ public class BMI extends JFrame {
 				double bmi = weight / ((height * 0.01) * (height * 0.01));
 				//Display BMI on the Your BMI text field
 				jtfBmi.setText(String.format("%.2f", bmi));
-				
+				//use BMI to judge the status 
 				if(bmi < 18.5)
 					jtfStatus.setText("Underweight");
 				else if(bmi < 25)
@@ -67,7 +67,7 @@ public class BMI extends JFrame {
 					jtfStatus.setText("Obese");	
 			}
 		}
-	  
+	  /**Main method*/
 	  public static void main(String[] args) {
 	    BMI frame = new BMI();
 	    frame.setSize(380 , 280);
