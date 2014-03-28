@@ -31,7 +31,7 @@ public class BMI extends JFrame {
 	    jtfBmi.setEditable(false);
 	    p1.add(new JLabel("Status"));
 	    p1.add(jtfStatus);
-	    jtfStatus.stEditable(false);
+	    jtfStatus.setEditable(false);
 	    p1.setBorder(new
 	      TitledBorder("BMI Test"));
 
