@@ -28,8 +28,10 @@ public class BMI extends JFrame {
 	    p1.add(jtfWeight);
 	    p1.add(new JLabel("BMI"));
 	    p1.add(jtfBmi);
+	    jtfBmi.setEditable(false);
 	    p1.add(new JLabel("Status"));
 	    p1.add(jtfStatus);
+	    jtfStatus.stEditable(false);
 	    p1.setBorder(new
 	      TitledBorder("BMI Test"));
 
